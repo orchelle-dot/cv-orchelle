@@ -1,0 +1,181 @@
+/* === Thèmes disponibles avec variables === */
+.theme-light {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #0077cc;
+    --card-bg: #f9f9f9;
+    --link-color: #0066cc;
+  }
+  
+  .theme-dark {
+    --bg-color: #121212;
+    --text-color: #f4f4f4;
+    --accent-color: #00cc99;
+    --card-bg: #1e1e1e;
+    --link-color: #66fff2;
+  }
+  
+  .theme-purple {
+    --bg-color: #2e003e;
+    --text-color: #fddfff;
+    --accent-color: #a259ff;
+    --card-bg: #3e0050;
+    --link-color: #ffccff;
+  }
+  
+  /* === Application des thèmes === */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* === Conteneur principal === */
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+  }
+  
+  /* === En-tête avec photo + nom === */
+  .header,
+  .cv-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    flex-wrap: wrap;
+  }
+  
+  /* === Photo de profil === */
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid var(--accent-color);
+  }
+  
+  /* === Infos de l'en-tête === */
+  .header-info {
+    flex: 1;
+  }
+  
+  .cv-name {
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--accent-color);
+  }
+  
+  .cv-title,
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+  }
+  
+  /* === Section générique === */
+  .section {
+    margin-bottom: 30px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .section:hover {
+    transform: translateY(-2px);
+  }
+  
+  .section h2 {
+    color: var(--accent-color);
+    margin-bottom: 12px;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 10px;
+    font-size: 1.4rem;
+  }
+  
+  /* === Liens === */
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* === Texte audio cliquable === */
+  .clickable {
+    cursor: pointer;
+    color: var(--link-color);
+    margin-bottom: 5px;
+    display: inline-block;
+    text-decoration: underline;
+  }
+  
+  /* === Audio et vidéo === */
+  audio, video {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* === Listes === */
+  ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  /* === Responsive mobile === */
+  @media (max-width: 600px) {
+    .header,
+    .cv-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .container {
+      padding: 15px;
+    }
+  
+    .profile-pic {
+      width: 90px;
+      height: 90px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  }
+  
+  /* === Sélecteur de thème === */
+  .theme-selector {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+  }
+  
+  .theme-selector select {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
