@@ -4,7 +4,8 @@ import './CV.css'; // Assure-toi que CV.css gère bien le style aussi ici
 const Header = () => {
   return (
     <header className="header">
-      <img src="image.jpg" alt="Photo de profil" className="profile-pic" />
+      <img src={`${process.env.PUBLIC_URL}/image.jpg`} alt="Photo de profil" className="profile-pic" />
+
 
       <div className="contact-info">
         <h1 className="name">YEMENE LOMBOUE ORCHELLE</h1>
